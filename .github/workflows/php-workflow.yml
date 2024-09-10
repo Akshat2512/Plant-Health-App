@@ -17,12 +17,22 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '7.4'
+      
+      - name: Set up ngrok
+        uses: actions/checkout@v4
+        uses: tmshkr/ngrok-ssh@latest
+        with:
+          NGROK_AUTHTOKEN: ${{ secrets.NGROK_TOKEN }}
+          NGROK_CONFIG_FILE: "ngrok.yml"
 
       - name: Install dependencies
         run: composer install
 
       - name: Install ngrok
         run: choco Install ngrok
+      
+      
+     
 
       - name: Start PHP server
         run: php -S localhost:8000 & ngrok http 8000
