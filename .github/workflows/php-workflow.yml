@@ -1,21 +1,27 @@
-name: PHP Workflow
+name: PHP Server
 
 on:
   push:
     branches:
-      - master  # Adjust to your default branch
+      - main
 
 jobs:
-  php-job:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Add your PHP setup steps here (e.g., installing dependencies)
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
 
-      - name: Run PHP script
-        run: php index.php
+      - name: Install dependencies
+        run: composer install
+
+      - name: Start PHP server
+        run: php -S localhost:8000 -t public/
 
 
