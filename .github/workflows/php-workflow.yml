@@ -22,6 +22,6 @@ jobs:
         run: composer install
 
       - name: Start PHP server
-        run: php -S localhost:8000 -t public/
+        run: php -S localhost:8000 -t
 
 
