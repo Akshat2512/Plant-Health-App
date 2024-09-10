@@ -25,9 +25,6 @@ jobs:
 
       - name: Install dependencies
         run: composer install
-
-      - name: Install ngrok
-        run: choco Install ngrok
       
       - name: Start PHP server
         run: php -S localhost:8000 & ngrok http 8000
