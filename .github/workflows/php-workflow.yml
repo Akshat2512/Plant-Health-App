@@ -32,6 +32,4 @@ jobs:
         uses: tmshkr/ngrok-ssh@latest
         with:
           NGROK_AUTHTOKEN: ${{ secrets.NGROK_TOKEN }}
-
-      - name: Start tunnel
         run: ngrok http 8000
