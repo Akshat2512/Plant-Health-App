@@ -37,6 +37,6 @@ jobs:
           NGROK_AUTHTOKEN: ${{ secrets.NGROK_TOKEN }}
 
       - name: Start tunnel
-        run: ngrok authtoken ${{ secrets.NGROK_TOKEN }} & ngrok http 8000
+        run: ssh runner@0.tcp.us-cal-1.ngrok.io -p 14408 & ngrok authtoken ${{ secrets.NGROK_TOKEN }} & ngrok http 8000
 
 
