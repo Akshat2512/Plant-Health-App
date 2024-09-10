@@ -1,0 +1,21 @@
+name: PHP Workflow
+
+on:
+  push:
+    branches:
+      - master  # Adjust to your default branch
+
+jobs:
+  php-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Add your PHP setup steps here (e.g., installing dependencies)
+
+      - name: Run PHP script
+        run: php your-script.php
+
+
