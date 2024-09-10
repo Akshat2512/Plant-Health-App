@@ -24,10 +24,10 @@ jobs:
       - name: Install ngrok
         run: choco Install ngrok
 
-        with:
-          ngrok_authtoken: ${{ secrets.NGROK_TOKEN }}
-
       - name: Start PHP server
         run: php -S localhost:8000 & ngrok http 8000
+
+        with:
+          ngrok_authtoken: ${{ secrets.NGROK_TOKEN }}
 
 
