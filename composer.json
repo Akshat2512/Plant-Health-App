@@ -1,5 +1,5 @@
 {
-    "name": "plant-health-app",
+    "name": "monolog/monolog",
     "require": {
         "php": "^7.4",
         "other/package": "^1.0"
