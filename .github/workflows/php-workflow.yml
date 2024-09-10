@@ -28,8 +28,11 @@ jobs:
      needs: setup-php
      runs-on: ubuntu-latest
      steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
       - name: Set up ngrok
-        uses: luisboto/ngrok-tunnel-action@v1
+        uses: luisboto/ngrok-tunnel-action@v2
         with:
           timeout: 1h
           port: 8000
