@@ -16,6 +16,6 @@ jobs:
       # Add your PHP setup steps here (e.g., installing dependencies)
 
       - name: Run PHP script
-        run: php your-script.php
+        run: php index.php
 
 
