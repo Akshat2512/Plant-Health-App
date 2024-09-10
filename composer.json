@@ -1,0 +1,7 @@
+{
+    "name": "plant-health-app",
+    "require": {
+        "php": "^7.4",
+        "other/package": "^1.0"
+    }
+}
