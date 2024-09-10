@@ -22,7 +22,6 @@ jobs:
         uses: tmshkr/ngrok-ssh@latest
         with:
           NGROK_AUTHTOKEN: ${{ secrets.NGROK_TOKEN }}
-          NGROK_CONFIG_FILE: "ngrok.yml"
 
       - name: Install dependencies
         run: composer install
