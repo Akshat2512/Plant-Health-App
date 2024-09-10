@@ -24,7 +24,7 @@ jobs:
       - name: Start PHP server
         run: php -S localhost:8000
   
-  build-ngrok:
+  setup-ngrok:
      needs: setup-php
      runs-on: ubuntu-latest
      steps:
