@@ -1,7 +1,6 @@
 {
-    "name": "monolog/monolog",
+    "name": "myvendor/my-package",
     "require": {
-        "php": "^7.4",
-        "other/package": "^1.0"
+        "monolog/monolog": "^2.0"
     }
 }
