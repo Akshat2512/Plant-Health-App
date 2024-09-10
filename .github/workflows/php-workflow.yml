@@ -19,8 +19,7 @@ jobs:
           php-version: '7.4'
       
       - name: Set up ngrok
-      - uses: actions/checkout@v4
-      - uses: tmshkr/ngrok-ssh@latest
+        uses: tmshkr/ngrok-ssh@latest
         with:
           NGROK_AUTHTOKEN: ${{ secrets.NGROK_TOKEN }}
           NGROK_CONFIG_FILE: "ngrok.yml"
