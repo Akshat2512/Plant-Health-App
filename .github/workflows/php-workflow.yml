@@ -6,33 +6,33 @@ on:
       - master
 
 jobs:
-  setup-php:
-    runs-on: ubuntu-latest
+  # setup-php:
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v2
 
-      - name: Set up PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '7.4'
+  #     - name: Set up PHP
+  #       uses: shivammathur/setup-php@v2
+  #       with:
+  #         php-version: '7.4'
 
-      - name: Install dependencies
-        run: composer install
+  #     - name: Install dependencies
+  #       run: composer install
       
-      - name: Start PHP server
-        run: php -S localhost:8000 &
+  #     - name: Start PHP server
+  #       run: php -S localhost:8000 &
   
   setup-ngrok:
-     needs: setup-php
+    #  needs: setup-php
      runs-on: ubuntu-latest
      steps:
       - name: Checkout code
         uses: actions/checkout@v2
         
       - name: Set up ngrok
-        uses: luisboto/ngrok-tunnel-action@v2
+        uses: luisboto/ngrok-tunnel-action@latest
         with:
           timeout: 1h
           port: 8000
