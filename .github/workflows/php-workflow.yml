@@ -31,10 +31,7 @@ jobs:
       - name: Set up ngrok
         uses: tmshkr/ngrok-ssh@latest
         with:
-          timeout: 5 minutes
-          port: 8000
+          SSH_PORT: 8000
           NGROK_AUTHTOKEN: ${{ secrets.NGROK_TOKEN }}
-          tunnel_type: https
-          save_url_to_filename: tunnelURL.md
 
 
