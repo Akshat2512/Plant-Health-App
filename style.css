@@ -24,11 +24,11 @@
         width: 100%;
         justify-content: center;
         
-    }
+      }
 
        
      
-        #cameraList{
+    #cameraList{
             background-color: aliceblue;
             position: absolute;
             z-index: 1;
@@ -38,7 +38,7 @@
             border-radius: 2px;
         }
 
-        #btn{
+    #btn{
             position: absolute;
             bottom: 0px;
             display: flex;
