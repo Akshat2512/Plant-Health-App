@@ -26,9 +26,8 @@ jobs:
 
 
   setup-ngrok:
-    runs-on: ubuntu-latest
     needs: setup-php
-    
+
     steps:
     
       - name: Set up ngrok
