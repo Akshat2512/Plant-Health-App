@@ -34,7 +34,7 @@ jobs:
       - name: Set up ngrok
         uses: tmshkr/ngrok-ssh@latest
         with:
-          PORT: 8000
+          SSH_PORT: 8000
           NGROK_AUTHTOKEN: ${{ secrets.NGROK_TOKEN }}
 
       - name: Start tunnel
