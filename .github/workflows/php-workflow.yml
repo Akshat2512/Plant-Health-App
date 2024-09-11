@@ -38,6 +38,6 @@ jobs:
           NGROK_CONFIG_FILE: "../../../.ngrok/ngrok.yml"
 
       - name: Start tunnel
-        run: npm start http-server -p 8000
+        run: npm start
 
        
