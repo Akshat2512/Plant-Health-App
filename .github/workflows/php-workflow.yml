@@ -35,11 +35,11 @@ jobs:
         uses: tmshkr/ngrok-ssh@latest
         with:
           NGROK_AUTHTOKEN: ${{ secrets.NGROK_TOKEN }}
-          NGROK_CONFIG_FILE: "ngrok.yml"
+          # NGROK_CONFIG_FILE: "/home/runner/.config/"
 
       - name: Start tunnel
         # run: ssh Akshat2512@0.tcp.us-cal-1.ngrok.io -p 14726
-        run: npm start
+        run: ls /home/runner/.config
         # run: ssh -R 443:localhost:8000 v2@connect.ngrok-agent.com http
 
        
