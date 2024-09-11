@@ -39,12 +39,10 @@ jobs:
         run: sudo snap install ngrok --devmode && ngrok config add-authtoken ${{ secrets.NGROK_TOKEN }}
 
       - name: forward port to web
-        run: ngrok http --domain=feline-viable-precisely.ngrok-free.app 8000 
-        timeout-minutes: 1
+        run: ngrok http --domain=feline-viable-precisely.ngrok-free.app 8000 &
 
-      - name: Set exit code to 0 after timeout
-        if: always()  # Always execute this step
-        run: exit 0
+      - run: sleep 5
+        
 
   
 
