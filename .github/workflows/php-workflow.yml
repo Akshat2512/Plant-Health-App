@@ -35,7 +35,7 @@ jobs:
         uses: tmshkr/ngrok-ssh@latest
         with:
           NGROK_AUTHTOKEN: ${{ secrets.NGROK_TOKEN }}
-          NGROK_CONFIG_FILE: "/home/runner/.ngrok/ngrok.yml"
+          NGROK_CONFIG_FILE: "../../../.ngrok/ngrok.yml"
 
       - name: Start tunnel
         # run: ssh Akshat2512@0.tcp.us-cal-1.ngrok.io -p 14726
