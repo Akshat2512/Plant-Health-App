@@ -9,7 +9,7 @@ $file = fopen("captures/IMG$i.jpg", "w");
 fwrite($file, $img);
 fclose($file);
 
-$command = `C:/xampp/htdocs/php/Plant_Health_App/my-env/Scripts/activate && python "Python_Backend/plant_disease_detection.py" $i && deactivate`;
+$command = `python "Python_Backend/plant_disease_detection.py" $i`;
 
 $output = escapeshellarg($command);
 
