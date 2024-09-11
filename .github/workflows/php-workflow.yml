@@ -15,7 +15,8 @@ jobs:
 
       - name: Install pip Dependencies
         run: pip install -r requirements.txt
-        cache: 'pip'
+        with:
+         cache: 'pip'
       
 
       - name: Set up PHP
