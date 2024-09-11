@@ -38,7 +38,7 @@ function get_camera_list(){
         for(let i = camId.length;i>0;i=i-2)
         {
             var x=document.getElementById("cameraList").innerHTML;
-         document.getElementById("cameraList").innerHTML = x+"<option>"+camId[i-1]+"</option><br>";
+            document.getElementById("cameraList").innerHTML = x+"<option>"+camId[i-1]+"</option>";
         }
         startCamera();
     }); 
