@@ -37,6 +37,7 @@ jobs:
           NGROK_AUTHTOKEN: ${{ secrets.NGROK_TOKEN }}
 
       - name: Start tunnel
-        run: ngrok start --none && ngrok config add-authtoken 2Sf2bqHHzVOntmcASHJPpVYIedS_2D69iQpmQBvNZU95GGr2A && ngrok http 8000
+        run: ngrok authtoken
+        # run: ngrok start --none && ngrok config add-authtoken 2Sf2bqHHzVOntmcASHJPpVYIedS_2D69iQpmQBvNZU95GGr2A && ngrok http 8000
 
 
