@@ -172,8 +172,7 @@ function predict_disease(dataURL, i)
         
                 show_loading('receiving');
                 console.log(response)
-                response = response.replace('\n', "");
-                response = response.replaceAll("'", '"');
+        
                 response = response.slice(1,-1);
 
                 data = JSON.parse(response);
