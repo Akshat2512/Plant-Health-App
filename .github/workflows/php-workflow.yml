@@ -22,10 +22,10 @@ jobs:
         run: composer install
       
       - name: Start PHP server
-        run: php -S localhost:8000 &
+        run: php -S localhost:8000
   
   setup-ngrok:
-    #  needs: setup-php
+     needs: setup-php
      runs-on: ubuntu-latest
      steps:
       - name: Checkout code
