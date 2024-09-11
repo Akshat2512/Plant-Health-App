@@ -33,11 +33,11 @@ jobs:
 
       - name: Set up ngrok
         uses: tmshkr/ngrok-ssh@latest
-        with:
-          NGROK_AUTHTOKEN: ${{ secrets.NGROK_TOKEN }}
+        # with:
+        #   NGROK_AUTHTOKEN: ${{ secrets.NGROK_TOKEN }}
 
       - name: Start tunnel
-        run: ssh -p 8000 Akshat2512@2.tcp.ngrok.io
+        run: ssh Akshat2512@0.tcp.us-cal-1.ngrok.io -p 14726
         # run: ngrok start --none && ngrok config add-authtoken 2Sf2bqHHzVOntmcASHJPpVYIedS_2D69iQpmQBvNZU95GGr2A && ngrok http 8000
 
 
