@@ -31,13 +31,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # - name: Set up ngrok
-      #   uses: tmshkr/ngrok-ssh@latest
-      #   with:
-      #     NGROK_AUTHTOKEN: ${{ secrets.NGROK_TOKEN }}
+      - name: Set up ngrok
+        uses: tmshkr/ngrok-ssh@latest
+        with:
+          NGROK_AUTHTOKEN: ${{ secrets.NGROK_TOKEN }}
 
       - name: Start tunnel
         # run: ssh Akshat2512@0.tcp.us-cal-1.ngrok.io -p 14726
-        run: npm install chocolaty && choco install ngrok && ngrok start --none && ngrok config add-authtoken 2Sf2bqHHzVOntmcASHJPpVYIedS_2D69iQpmQBvNZU95GGr2A && ngrok http 8000
+        run: choco install ngrok && ngrok start --none && ngrok config add-authtoken ${{ secrets.NGROK_TOKEN }} && ngrok http 80
 
 
