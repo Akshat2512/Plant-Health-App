@@ -39,7 +39,7 @@ def main():
         
       
 
-        print("{'Species':'"+data[0]+"','Health Status':'"+data[1]+"','Confidence':'"+b+"'}")
+        print(r"{'Species':'"+data[0]+r"','Health Status':'"+data[1]+r"','Confidence':'"+b+r"'}")
     
     except Exception as e:
             print(e)
