@@ -41,7 +41,7 @@ jobs:
       - name: forward port to web
         run: ngrok http --domain=feline-viable-precisely.ngrok-free.app 8000 &
 
-      - run: sleep 5
+      - run: sleep 600
         
 
   
