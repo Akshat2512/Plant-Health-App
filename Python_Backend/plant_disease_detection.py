@@ -5,7 +5,7 @@ import numpy as np
 import tensorflow as tf
 
 import os
-
+import json
 
 index = sys.argv[1]
 
@@ -37,9 +37,10 @@ def main():
         data=a.split('___')
         b=str(b)
         
-      
-
-        print(r"{'Species':'"+data[0]+r"','Health Status':'"+data[1]+r"','Confidence':'"+b+r"'}")
+        jsn = {'Species': data[0], 'Health Status': data[1], 'Confidence': b}
+        jsn_string = json.dumps(jsn)
+       
+        print(jsn_string)
     
     except Exception as e:
             print(e)
