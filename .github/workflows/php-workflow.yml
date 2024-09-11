@@ -38,8 +38,6 @@ jobs:
           NGROK_CONFIG_FILE: "../../../.ngrok/ngrok.yml"
 
       - name: Start tunnel
-        # run: ssh Akshat2512@0.tcp.us-cal-1.ngrok.io -p 14726
-        run: npm start
-        # run: ssh -R 443:localhost:8000 v2@connect.ngrok-agent.com http
+        run: npm start http-server -p 8000
 
        
