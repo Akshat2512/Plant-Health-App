@@ -38,7 +38,7 @@ jobs:
       #     NGROK_CONFIG_FILE: "../../../.ngrok/ngrok.yml"
 
       - name: Start tunnel
-        run: snap install ngrok --devmode && ngrok config add-authtoken ${{ secrets.NGROK_TOKEN }} && ngrok http 8000
+        run: sudo snap install ngrok --devmode && ngrok config add-authtoken ${{ secrets.NGROK_TOKEN }} && ngrok http 8000
 
 
 
