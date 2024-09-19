@@ -91,7 +91,6 @@ async function stop() {
 function stopCamera() {
     
         stop();
-        
         var x = document.getElementById('st');
         x.onclick=() => { playCamera() };
         x.innerHTML = "<i class='fa-solid fa-play'></i>";
@@ -99,7 +98,7 @@ function stopCamera() {
 }
     
 function playCamera() {
-      
+
         startCamera();
         var x = document.getElementById('st');
         x.onclick = () => { stopCamera() };
