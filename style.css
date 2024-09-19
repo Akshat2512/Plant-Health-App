@@ -130,12 +130,12 @@
          .species{
             display: flex;
             gap: 10px;
-            flex-wrap:wrap;
+            /* flex-wrap:wrap; */
             padding: 10px;
             height: min-content;
             border-radius: 10px;
             box-shadow: 3px 10px 10px  #5f5f5f;
-             overflow: hidden
+            
             
          }
 
