@@ -130,7 +130,6 @@ function update_data(data, dataURL, i)
 
 let width=video.videoWidth;
 let height=video.videoHeight;
-console.log(width,height);
 
 var list_data = $('#results').eq(0)[0];
 
@@ -169,8 +168,6 @@ function predict_disease(dataURL, i)
                 show_loading('receiving');
                 
                 response = response.slice(1,-1);
-               
-                console.log(response)
 
                 data = JSON.parse(response);
                 console.log(data);
