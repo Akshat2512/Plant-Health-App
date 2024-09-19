@@ -9,7 +9,7 @@ $file = fopen("captures/IMG$i.jpg", "w");
 fwrite($file, $img);
 fclose($file);
 
-$command = `python "Python_Backend/plant_disease_detection.py"`;
+$command = `python "Python_Backend/plant_disease_detection.py" $i`;
 
 $output = escapeshellarg($command);
 
