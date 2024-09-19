@@ -44,7 +44,7 @@ function get_camera_list(){
 
 async function checkCameraAccess() {
     try {
-        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        const stream = await n.getUserMedia({ video: true });
         // User granted access to the camera
         stream.getTracks().forEach(track => track.stop()); // Release the camera stream
         return true;
@@ -74,16 +74,15 @@ function startCamera()
 
      n.getUserMedia({video:{deviceId:{exact:camId[index-1]}, width: {ideal:256}, height:{ideal:256}}}).then(stream => {
                  video.srcObject = stream;
-                 ls=stream;
                  video.play();
                 }).catch(error => { console.error('Error accessing media devices.', error); });
     return changecamera
 } 
 
 
-function stop() {
+async function stop() {
 
-    ls.getTracks().forEach(function(track) {
+    video.srcObject.getTracks().forEach(function(track) {
     video.pause();
     track.stop();
     });
