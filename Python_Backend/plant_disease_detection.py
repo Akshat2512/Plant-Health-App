@@ -27,7 +27,7 @@ def main():
         os.remove('captures/IMG'+index+'.jpg')
         img_array = tf.keras.utils.img_to_array(img)
         img_array = tf.expand_dims(img_array, 0) # Create a batch
-
+        
         predictions = model.predict(img_array, verbose=0)
         score = tf.nn.softmax(predictions[0])
 
@@ -39,7 +39,6 @@ def main():
         
         jsn = {'Species': data[0], 'Health Status': data[1], 'Confidence': b}
         jsn_string = json.dumps(jsn)
-       
         print(jsn_string)
     
     except Exception as e:

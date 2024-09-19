@@ -1,7 +1,5 @@
 
        
-        
-const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 const video = document.querySelector('video');
 
@@ -171,9 +169,10 @@ function predict_disease(dataURL, i)
             success: function(response){
         
                 show_loading('receiving');
-                console.log(response)
-        
+                
                 response = response.slice(1,-1);
+               
+                console.log(response)
 
                 data = JSON.parse(response);
                 console.log(data);

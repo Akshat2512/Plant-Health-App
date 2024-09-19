@@ -9,20 +9,13 @@ $file = fopen("captures/IMG$i.jpg", "w");
 fwrite($file, $img);
 fclose($file);
 
-$command = `python "Python_Backend/plant_disease_detection.py" $i`;
+$command = `python "Python_Backend/plant_disease_detection.py"`;
 
 $output = escapeshellarg($command);
 
 echo $output;
 
-
 die;
-}
-if(isset($_POST['url2']))
-{   
-    $dlt=$_POST['url2'];
-    unlink($dlt);
-    die;
 }
 die;
 ?>
