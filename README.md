@@ -13,7 +13,7 @@ Frontend:
 The frontend is built using modern web technologies such as HTML5, CSS and Javascript. It provides a user-friendly interface for interacting with the app. This app is suitable for both desktop and Mobile devices. Even for low end devices.  
 Here’s a sneak peek of the frontend: 
 <br>
-<img src="Extra/frontend_1.jpg" alt="" height="400px"/> 
+<img src="Extra/frontend_1.jpg" alt="" height="400px"/> &nbsp&nbsp
 <img src="Extra/frontend_2.jpg" alt="" height="400px"/>
 <br>
 Image Processing:
