@@ -17,7 +17,7 @@ Here’s a sneak peek of the frontend:
 <p align="center">
 <img src="Extra/frontend_1.jpg" alt="Image 1" style="height: 500px"> &nbsp&nbsp
 <img src="Extra/frontend_2.jpg" alt="Image 2" style="height: 500px">
-<p>
+</p>
 
 - Image Processing:
 When a user captures or uploads an image, the frontend sends it to the backend for analysis.
@@ -25,8 +25,10 @@ The backend processes the image using a pre-trained deep learning model (such as
 
 - Backend:
 The backend is responsible for handling image processing, model inference, and returning the prediction results.
-You can use diagrams or flowcharts to illustrate how data flows from the frontend to the backend and back.
-Briefly mention the technologies you’ve used for the backend (e.g., PHP server) and any cloud services (like Heroku ) you’ve integrated.
+Here's the Data Flow diagram of the whole system:
+<p align="center">
+<img src="Extra/plant_disease.drawio.png" alt="DFD diagram" style="height: 500px">
+</p>
 
 - Prediction Results:
 Once the backend processes the image, it returns the predicted disease class (e.g., “Powdery Mildew,” “Rust,” “Bacterial Blight”) to the frontend.
