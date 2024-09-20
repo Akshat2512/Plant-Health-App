@@ -11,9 +11,11 @@ Features
 ## How It Works?
 Frontend:
 The frontend is built using modern web technologies such as HTML5, CSS and Javascript. It provides a user-friendly interface for interacting with the app. This app is suitable for both desktop and Mobile devices. Even for low end devices.  
-Here’s a sneak peek of the frontend: <br>
+Here’s a sneak peek of the frontend: 
+<br>
 <img src="Extra/frontend_1.jpg" alt="" height="400px"/> 
 <img src="Extra/frontend_2.jpg" alt="" height="400px"/>
+<br>
 Image Processing:
 When a user captures or uploads an image, the frontend sends it to the backend for analysis.
 The backend processes the image using a pre-trained deep learning model (such as a convolutional neural network) specifically trained for plant disease classification.
