@@ -14,8 +14,8 @@ The frontend is built using modern web technologies such as HTML5, CSS and Javas
 Here’s a sneak peek of the frontend: 
 <br>
 <div style="display: flex; justify-content: space-between;">
-    <img src="frontend_1.jpg" alt="Image 1" style="margin-right: 20px;">
-    <img src="frontend_2.jpg" alt="Image 2">
+    <img src="Extra/frontend_1.jpg" alt="Image 1" style="margin-right: 20px;">
+    <img src="Extra/frontend_2.jpg" alt="Image 2">
 </div>
 <br>
 Image Processing:
