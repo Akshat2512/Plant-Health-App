@@ -16,7 +16,10 @@ Here’s a sneak peek of the frontend:
 
 <br>
 <p align="center">
-<img src="Extra/frontend_1.jpg" alt="Image 1" style="height: 400px; margin-right: 20px;"> 
+<img src="Extra/frontend_1.jpg" alt="Image 1" style="height: 400px; margin-right: 20px;">
+
+
+
 <img src="Extra/frontend_2.jpg" alt="Image 2" style="height: 400px">
 <p>
 
