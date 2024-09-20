@@ -10,8 +10,9 @@ Features
 
 ## How It Works?
 Frontend:
-The frontend is built using modern web technologies such as HTML5, CSS and Javascript (or any other framework you’ve used). It provides a user-friendly interface for interacting with the app. This app is suitable for both desktop and Mobile devices. Even for low end devices.  
-Here’s a sneak peek of the frontend: !["Extra/frontend_1.jpg"]
+The frontend is built using modern web technologies such as HTML5, CSS and Javascript. It provides a user-friendly interface for interacting with the app. This app is suitable for both desktop and Mobile devices. Even for low end devices.  
+Here’s a sneak peek of the frontend: 
+<img src="Extra/frontend_1.jpg"/>
 
 Image Processing:
 When a user captures or uploads an image, the frontend sends it to the backend for analysis.
