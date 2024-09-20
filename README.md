@@ -15,10 +15,8 @@ The frontend is built using modern web technologies such as HTML5, CSS and Javas
 Here’s a sneak peek of the frontend: 
 
 <p align="center">
-<img src="Extra/frontend_1.jpg" alt="Image 1" style="height: 400px; margin-right: 20px;"><br>
-*Figure 1: The Plant Disease Detection App*
-<img src="Extra/frontend_2.jpg" alt="Image 2" style="height: 400px"><br>
-*Figure 1: The Plant Disease Detection App*
+<img src="Extra/frontend_1.jpg" alt="Image 1" style="height: 400px; margin-right: 20px;"> &nbsp&nbsp
+<img src="Extra/frontend_2.jpg" alt="Image 2" style="height: 400px">
 <p>
 
 - Image Processing:
