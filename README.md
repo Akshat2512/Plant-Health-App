@@ -7,17 +7,21 @@ Features
 <li>Disease Prediction: The app processes the uploaded image and predicts the type of disease affecting the plant.</li>
 <li>Visual Feedback: The prediction results are displayed alongside the input image, making it easy for users to understand.</li>
 </ol>
-How It Works
+
+## How It Works?
 Frontend:
-The frontend is built using modern web technologies such as Angular (or any other framework you’ve used). It provides a user-friendly interface for interacting with the app.
-Here’s a sneak peek of the frontend: !Frontend Preview
+The frontend is built using modern web technologies such as HTML5, CSS and Javascript (or any other framework you’ve used). It provides a user-friendly interface for interacting with the app. This app is suitable for both desktop and Mobile devices. Even for low end devices.  
+Here’s a sneak peek of the frontend: !("Extra/frontend_1.jpg")
+
 Image Processing:
-When a user uploads an image, the frontend sends it to the backend for analysis.
+When a user captures or uploads an image, the frontend sends it to the backend for analysis.
 The backend processes the image using a pre-trained deep learning model (such as a convolutional neural network) specifically trained for plant disease classification.
+
 Backend:
 The backend is responsible for handling image processing, model inference, and returning the prediction results.
-While you don’t necessarily need to include backend photos in the README, it’s essential to explain its role and architecture. You can use diagrams or flowcharts to illustrate how data flows from the frontend to the backend and back.
+You can use diagrams or flowcharts to illustrate how data flows from the frontend to the backend and back.
 Briefly mention the technologies you’ve used for the backend (e.g., PHP server) and any cloud services (like Heroku ) you’ve integrated.
+
 Prediction Results:
 Once the backend processes the image, it returns the predicted disease class (e.g., “Powdery Mildew,” “Rust,” “Bacterial Blight”) to the frontend.
 The frontend displays this information to the user.
