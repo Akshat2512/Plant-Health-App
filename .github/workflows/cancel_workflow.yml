@@ -1,0 +1,16 @@
+name: Cancel Previous Workflows
+
+on:
+  workflow_run:
+    workflows: ["PHP Server"]
+    types:
+      - requested
+
+jobs:
+  cancel-previous:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Cancel previous runs
+      uses: styfle/cancel-workflow-action@0.9.1
+      with:
+        access_token: ${{ secrets.WORKFLOW_TOKEN }}
