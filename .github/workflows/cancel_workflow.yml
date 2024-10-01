@@ -10,8 +10,23 @@ jobs:
   cancel-previous:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
     - name: Cancel previous runs
-      uses: styfle/cancel-workflow-action@0.9.1
-      with:
-        access_token: ${{ secrets.WORKFLOW_TOKEN }}
-        all_but_latest: true
+      run: |
+        RUN_ID=$(curl -s \
+          -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/${{ github.repository }}/actions/runs \
+          | jq -r '.workflow_runs[] | select(.conclusion==null) | .id')
+
+        for ID in $RUN_ID; do
+          curl -s \
+            -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/actions/runs/$ID/cancel
+        done
+
+        echo "Cancelled previous workflows: $RUN_ID"
