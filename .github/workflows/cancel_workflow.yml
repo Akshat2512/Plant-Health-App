@@ -16,7 +16,7 @@ jobs:
     - name: Cancel previous runs
       run: |
         RUN_ID=$(curl -s \
-          -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Authorization: token ${{ secrets.WORKFLOW_TOKEN }}" \
           -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/${{ github.repository }}/actions/runs \
           | jq -r '.workflow_runs[] | select(.conclusion==null) | .id')
@@ -24,7 +24,7 @@ jobs:
         for ID in $RUN_ID; do
           curl -s \
             -X POST \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Authorization: token ${{ secrets.WORKFLOW_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
             https://api.github.com/repos/${{ github.repository }}/actions/runs/$ID/cancel
         done
