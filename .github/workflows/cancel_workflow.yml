@@ -1,10 +1,10 @@
 name: Cancel Previous Workflows
 
-on:
-  workflow_run:
-    workflows: ["PHP Server"]
-    types:
-      - requested
+# on:
+#   workflow_run:
+#     workflows: ["PHP Server"]
+#     types:
+#       - requested
 
 jobs:
   cancel-previous:
