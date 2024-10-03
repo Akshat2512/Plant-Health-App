@@ -40,6 +40,9 @@ jobs:
       - name: forward port to web
         run: ngrok http --domain=teaching-civet-smoothly.ngrok-free.app 8000
 
+      - name: Trigger next workflow
+        run: gh workflow run php_workflow.yml
+
       # - run: sleep 300
         
 
