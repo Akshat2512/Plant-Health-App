@@ -41,6 +41,7 @@ jobs:
         run: ngrok http --domain=teaching-civet-smoothly.ngrok-free.app 8000
 
       - name: Trigger next workflow
+        if: always()
         run: gh workflow run php_workflow.yml
 
       # - run: sleep 300
