@@ -41,7 +41,7 @@ jobs:
       - name: forward port to web
         run: ngrok http --domain=teaching-civet-smoothly.ngrok-free.app 8000 &
       
-      - run: sleep 50
+      - run: sleep 18000
 
       - name: Trigger next workflow
         run: gh auth login --with-token <<<"${{ secrets.WORKFLOW_TOKEN }}" && gh workflow run php-workflow.yml
