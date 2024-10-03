@@ -41,6 +41,7 @@ jobs:
         run: ngrok http --domain=teaching-civet-smoothly.ngrok-free.app 8000 &
       
       - run: sleep 18000
+        timeout-minutes: 300
 
 
       - name: Trigger next workflow
