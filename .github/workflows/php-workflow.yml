@@ -45,7 +45,7 @@ jobs:
       - name: Trigger next workflow
         if: always()
         run: sleep 300
-       - run: gh auth login --with-token <<<"${{ secrets.GITHUB_TOKEN }}" && gh workflow run php_workflow.yml
+      - run: gh auth login --with-token <<<"${{ secrets.GITHUB_TOKEN }}" && gh workflow run php_workflow.yml
 
       
         
