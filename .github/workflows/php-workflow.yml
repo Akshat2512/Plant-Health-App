@@ -40,7 +40,7 @@ jobs:
       - name: forward port to web
         run: ngrok http --domain=teaching-civet-smoothly.ngrok-free.app 8000 &
       
-      - run: sleep 100
+      - run: sleep 200
 
       
         
