@@ -8,13 +8,18 @@
       {
         "src": "index.html",
         "use": "@vercel/static"
+      },
+      {
+        "src": "public/style.css",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "public/jsScript.js",
+        "use": "@vercel/static"
       }
     ],
     "routes": [
-        {
-            "src": "index.html",
-            "dest": "/"
-          },
+     
         {
             "src": "/(.*)",
             "dest": "/public/$1"
