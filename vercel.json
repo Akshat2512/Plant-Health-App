@@ -1,14 +1,21 @@
 {
     "version": 2,
     "builds": [
-    {
-      "src": "PythonBackend/plant_disease_detection.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "public/**/*",
-      "use": "@vercel/static"
-    }
+      {
+        "src": "PythonBackend/plant_disease_detection.py",
+        "use": "@vercel/python",
+        "config": {
+          "installcommand" :"pip install -r requirements.txt"
+        }
+      },
+      {
+        "src": "index.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "public/**/*",
+        "use": "@vercel/static"
+      }
     ],
   
     "routes": [
@@ -16,9 +23,10 @@
             "src": "/(.*)",
             "dest": "/public/$1"
         },
-        { 
-            "src": "/api/script.php", 
-            "dest": "/api/script.php"
-         }
+        {
+            "src": "/api/(.*)",
+            "dest": "/api/$1"
+        }
+       
     ]
 }
