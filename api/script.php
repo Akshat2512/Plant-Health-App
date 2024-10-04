@@ -1,6 +1,9 @@
 <?php
-if(isset($_POST['url1']))
-{
+header('Content-Type: application/json');
+
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+
 $url = $_POST['url1'];
 $i = $_POST['val'];
 
@@ -21,6 +24,6 @@ $output = escapeshellarg($command);
 echo $output;
 
 die;
+
 }
-die;
 ?>
