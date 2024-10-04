@@ -22,7 +22,11 @@
         {
             "src": "/(.*)",
             "dest": "/public/$1"
-        }
+        },
+        {
+            "src": "/script.php",
+            "dest": "/script.php"
+          }
        
     ]
 }
