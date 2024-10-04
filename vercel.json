@@ -20,6 +20,5 @@
             "src": "/api/script.php", 
             "dest": "/api/script.php"
          }
-       
     ]
 }
