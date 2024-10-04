@@ -1,6 +1,0 @@
-{
-    "name": "myvendor/my-package",
-    "require": {
-        "monolog/monolog": "^2.0"
-    }
-}
