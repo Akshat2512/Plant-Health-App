@@ -3,10 +3,10 @@
     "builds": [
       {
         "src": "Python_Backend/plant_disease_detection.py",
-        "use": "@vercel/python",
-        "config": {
-        "installCommand": "pip install -r requirements.txt"
-      }
+        "use": "@vercel/python"
+    //     "config": {
+    //     "installCommand": "pip install -r requirements.txt"
+    //   }
       }
     ],
     "routes": [
