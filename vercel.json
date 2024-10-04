@@ -18,7 +18,7 @@
       }
 
     ],
-    
+
   "functions": {
     "api/*.php": {
       "runtime": "vercel-php@0.7.2"
@@ -31,8 +31,8 @@
             "dest": "/public/$1"
         },
         {
-            "src": "/",
-            "dest": "/script.php"
+          "src": "/api/script.php",
+          "dest": "/api/script.php"
         }
        
     ]
