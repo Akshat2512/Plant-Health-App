@@ -10,16 +10,15 @@
         "use": "@vercel/static"
       },
       {
-        "src": "public/style.css",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "public/jsScript.js",
+        "src": "public/**/*",
         "use": "@vercel/static"
       }
     ],
     "routes": [
-     
+        {
+            "src": "/(.*)",
+            "dest": "/public/$1"
+        }
        
     ]
 }
