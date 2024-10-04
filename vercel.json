@@ -3,27 +3,12 @@
 
   "functions": {
     "api/*.php": {
-      "runtime": "vercel-php@0.7.2"
+      "runtime": "vercel-php@0.7.2",
+      "maxDuration": 10,
+      "memory": 512
     }
   },
-    "builds": [
-      {
-        "src": "PythonBackend/plant_disease_detection.py",
-        "use": "@vercel/python",
-        "config": {
-          "installcommand" :"pip install -r requirements.txt"
-        }
-      },
-      {
-        "src": "index.html",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "public/**/*",
-        "use": "@vercel/static"
-      }
-
-    ],
+   
 
     "routes": [
         {
