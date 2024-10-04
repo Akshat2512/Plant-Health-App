@@ -16,18 +16,10 @@
       {
         "src": "public/jsScript.js",
         "use": "@vercel/static"
-      },
-      {
-        "src": "script.php",
-        "use": "@vercel/php"
       }
-
     ],
     "routes": [
      
-        {
-            "src": "/(.*)",
-            "dest": "/public/$1"
-        }
+       
     ]
 }
