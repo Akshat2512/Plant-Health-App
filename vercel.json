@@ -15,21 +15,23 @@
       {
         "src": "public/**/*",
         "use": "@vercel/static"
-      },
-       {
-        "src": "script.php",
-        "use": "@vercel/docker",
-        "config": {
-          "dockerfile": "Dockerfile"
-        }
       }
+      
     ],
+    
+    "functions": {
+        "api/**/*.php": { "runtime": "vercel-php@0.6.0" }
+    },
   
     "routes": [
         {
             "src": "/(.*)",
             "dest": "/public/$1"
-        }
+        },
+        { 
+            "src": "/(.*)", 
+            "dest": "/api/script.php"
+         }
        
     ]
 }
