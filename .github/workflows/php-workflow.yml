@@ -42,10 +42,6 @@ jobs:
       
       - run: sleep 20
 
-
-      - name: Trigger next workflow
-        run: gh auth login --with-token <<<"${{ secrets.WORKFLOW_TOKEN }}" && gh workflow run php-workflow.yml
-
       
         
 
