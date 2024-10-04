@@ -1,7 +1,6 @@
 {
     "version": 2,
     "builds": [
-   
       {
         "src": "Python_Backend/plant_disease_detection.py",
         "use": "@vercel/python",
