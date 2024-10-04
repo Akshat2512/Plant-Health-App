@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "script.php",
+        "use": "@vercel/php"
+      },
+      {
+        "src": "Python_Backend/plant_disease_detection.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/script.php"
+      }
+    ]
+  }
