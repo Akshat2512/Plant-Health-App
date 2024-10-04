@@ -1,6 +1,8 @@
 {
     "functions":{
-        "api/**/*.php": { "runtime": "vercel-php@0.7.2"}
+        "api/**/*.php": { 
+            "memory": 3009
+        }
     },
 
     "routes": [
@@ -9,5 +11,5 @@
             "dest": "/api/script.php"
         }
     ]
-    
+
 }
