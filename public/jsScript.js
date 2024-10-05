@@ -161,13 +161,11 @@ function predict_disease(dataURL, i)
     
    $.ajax({
             type: "POST",
-            url: "api/",
-            data: {url1 : dataURL, val : i},
+            url: "../api/",
+            data: {url : dataURL, url1 : '../', val : i},
             success: function(response){
         
                 show_loading('receiving');
-                
-                response = response.slice(1,-1);
                 console.log(response);
                 data = JSON.parse(response);
                 
