@@ -1,6 +1,6 @@
 {
     "functions": {
-        "api/index.php": {
+        "api/**/*.php": {
           "memory": 1024
         },
         "api/plant_disease_detection.py": {
