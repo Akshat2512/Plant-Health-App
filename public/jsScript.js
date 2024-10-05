@@ -168,9 +168,9 @@ function predict_disease(dataURL, i)
                 show_loading('receiving');
                 
                 response = response.slice(1,-1);
-
+                console.log(response);
                 data = JSON.parse(response);
-                console.log(data);
+                
                 update_data(data, dataURL, i);
             },
             error: function(xhr, status, error) {

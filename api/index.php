@@ -6,7 +6,7 @@ $i = $_POST['val'];
 
 echo "hello";
 if (!is_dir('captures')) {
-    mkdir('captures', 0777, true)
+    mkdir('captures', 0777, true);
 }
 
 $img = file_get_contents($url);
@@ -20,7 +20,6 @@ $output = escapeshellarg($command);
 
 echo $output;
 
-die;
 }
-die;
+
 ?>
