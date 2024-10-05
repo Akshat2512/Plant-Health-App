@@ -1,12 +1,6 @@
 <?php
-header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: https://plant-health-app-123.vercel.app');
-header('Access-Control-Allow-Methods: POST');
-header('Access-Control-Allow-Headers: Content-Type');
-
-if($_SERVER['REQUEST_METHOD'] === 'POST'){
-
-
+if(isset($_POST['url1']))
+{
 $url = $_POST['url1'];
 $i = $_POST['val'];
 
@@ -27,6 +21,6 @@ $output = escapeshellarg($command);
 echo $output;
 
 die;
-
 }
+die;
 ?>
