@@ -1,6 +1,6 @@
 <?php
 
-
+print_r($_POST);
 if(isset($_POST['url1']))
 {
 $url = $_POST['url1'];
