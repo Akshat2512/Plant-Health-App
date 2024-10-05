@@ -4,22 +4,9 @@
     "builds": [
     {
       "src": "api/**/*.py",
-      "use": "@vercel/python",
-      "config": {
-        "runtime": "python3.10"
-      }
+      "use": "@vercel/python@canary",
     }
   ],
-  "build": {
-    "env": {
-      "PYTHON_VERSION": "3.10.0"
-    },
-    "commands": [
-      "curl -sSL https://install.python-poetry.org | python3 -",
-      "poetry env use 3.10.0",
-      "poetry install"
-    ]
-  },
     "rewrites": [
       { "source": "/(.*)", "destination": "api/index.py" }
     ]
