@@ -1,6 +1,6 @@
 node_modules/
 .github/
 Extra/
-Images/
-Model/
+Images
+Model
 api/index.php
