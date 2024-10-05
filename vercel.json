@@ -7,7 +7,7 @@
             "use": "@vercel/static" 
         },
         
-       { "src": "package.json", "use": "@vercel/static-build" }
+       { "src": "package.json", "installCommand": "npm install && npm run vercel-build" }
     ],
 
     "routes": [
