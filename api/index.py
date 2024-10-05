@@ -9,6 +9,7 @@ CORS(app)
 def index():
     return "hello"
 
-@app.route('/greet', methods=['GET'])
+@app.route('/send', methods=['POST'])
 def  greet():
+    response = request.json
     return "hello_world"
