@@ -20,7 +20,7 @@ fclose($file);
 echo $i;
 $command = `python "../Python_Backend/plant_disease_detection.py" $i`;
 
-$output = escapeshellarg($command);
+$output = shell_exec($command);
 
 
 echo $output;
