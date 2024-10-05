@@ -1,11 +1,19 @@
 {
-    "functions":{
-        "api/**/*.php": { 
-            "memory": 3009
+    "version": 2,
+    
+    "build":{
+        {
+            "src": "public/**/*",
+            "use": "@vercel/static" 
         }
     },
 
     "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/public/$1"
+        },
+
         {
             "src": "/(.*)",
             "dest": "/api/script.php"
