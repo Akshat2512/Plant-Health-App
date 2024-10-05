@@ -10,5 +10,5 @@ def index():
     return "hello"
 
 @app.route('/greet', methods=['GET'])
-def index():
+def  greet():
     return "hello_world"
