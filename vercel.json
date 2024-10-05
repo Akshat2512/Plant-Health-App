@@ -7,7 +7,7 @@
             "use": "@vercel/static" 
         },
         {
-            "src": "api/**/*.php",
+            "src": "api/script.php",
             "use": "@vercel/node"
           }
     ],
