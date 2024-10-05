@@ -2,12 +2,14 @@
 if(isset($_POST['url1']))
 {
 $url = $_POST['url1'];
+$url_1 =  $_POST['url2'];
 $i = $_POST['val'];
 
-$cap_Dir = 'tmp/captures';
-if (!is_dir($cap_Dir)) {
-    mkdir('captures', 0777, true);
-}
+$cap_Dir = $url_1;
+
+// if (!is_dir($cap_Dir)) {
+//     mkdir('\captures', 0777, true);
+// }
 
 $img = file_get_contents($url);
 $file = fopen("$cap_Dir/IMG$i.jpg", "w");

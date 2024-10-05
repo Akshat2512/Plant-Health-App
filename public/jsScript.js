@@ -162,7 +162,7 @@ function predict_disease(dataURL, i)
    $.ajax({
             type: "POST",
             url: "api/",
-            data: {url1 : dataURL, val : i},
+            data: {url1 : dataURL, url2:"", val : i},
             success: function(response){
         
                 show_loading('receiving');
