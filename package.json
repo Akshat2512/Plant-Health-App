@@ -1,7 +1,5 @@
 {
-  "scripts": {
-    "vercel-build": "echo 'Running Vercel Build' && vercel dev"
-  },
+  
   "dependencies": {
     "vercel-php": "^0.7.2"
   }
