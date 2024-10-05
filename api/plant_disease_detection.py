@@ -1,10 +1,10 @@
 import sys
 
-import numpy as np
-import tensorflow as tf
+# import numpy as np
+# import tensorflow as tf
 
-import os
-import json
+# import os
+# import json
 
 index = sys.argv[1]
 print(index)
@@ -15,34 +15,34 @@ img_width = 256
 
 
 
-model = tf.keras.models.load_model('../Model/model.h5')
+# model = tf.keras.models.load_model('../Model/model.h5')
 
 
-def main():
+# def main():
     
-    try:
+#     try:
         
-        img = tf.keras.utils.load_img('/tmp/captures/IMG'+index+'.jpg', target_size=(img_height, img_width))
-        os.remove('/tmp/captures/IMG'+index+'.jpg')
-        img_array = tf.keras.utils.img_to_array(img)
-        img_array = tf.expand_dims(img_array, 0) # Create a batch
+#         img = tf.keras.utils.load_img('/tmp/captures/IMG'+index+'.jpg', target_size=(img_height, img_width))
+#         os.remove('/tmp/captures/IMG'+index+'.jpg')
+#         img_array = tf.keras.utils.img_to_array(img)
+#         img_array = tf.expand_dims(img_array, 0) # Create a batch
         
-        predictions = model.predict(img_array, verbose=0)
-        score = tf.nn.softmax(predictions[0])
+#         predictions = model.predict(img_array, verbose=0)
+#         score = tf.nn.softmax(predictions[0])
 
-        a=class_names[np.argmax(score)]
-        b=round(100 * np.max(score),2)
+#         a=class_names[np.argmax(score)]
+#         b=round(100 * np.max(score),2)
         
-        data=a.split('___')
-        b=str(b)
+#         data=a.split('___')
+#         b=str(b)
         
-        jsn = {'Species': data[0], 'Health Status': data[1], 'Confidence': b}
-        jsn_string = json.dumps(jsn)
-        print(jsn_string)
+#         jsn = {'Species': data[0], 'Health Status': data[1], 'Confidence': b}
+#         jsn_string = json.dumps(jsn)
+#         print(jsn_string)
     
-    except Exception as e:
-            print(e)
+#     except Exception as e:
+#             print(e)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
 
