@@ -1,12 +1,12 @@
 {
     "version": 2,
     
-    "build":{
+    "builds":[
         {
             "src": "public/**/*",
             "use": "@vercel/static" 
         }
-    },
+    ],
 
     "routes": [
         {
