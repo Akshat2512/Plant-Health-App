@@ -9,9 +9,10 @@ $i = $_POST['val'];
 
 $cap_Dir = $url_1;
 
-// if (!is_dir($cap_Dir)) {
-//     mkdir('\captures', 0777, true);
-// }
+if (!is_dir($cap_Dir)) {
+    mkdir($url_1, 0777, true);
+}
+
 $files = scandir($url_1);
 echo "<pre>";
 print_r($files);
