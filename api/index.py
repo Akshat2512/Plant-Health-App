@@ -10,6 +10,8 @@ def index():
     return "hello"
 
 @app.route('/send', methods=['POST'])
-def  greet():
-    response = request.json
-    return "hello_world"
+def greet():
+    req = request.json
+    data = req_data['img']
+    response = subprocess.run['python','python.py', 'dataURL']
+    return response
