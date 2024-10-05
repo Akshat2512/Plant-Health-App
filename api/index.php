@@ -18,7 +18,7 @@ fclose($file);
 
 print_r(scandir($url_1));
 
-$command = `my-env/Scripts/activate && python "plant_disease_detection.py" $i && deactivate`;
+$command = `python "plant_disease_detection.py" $i`;
 echo $command;
 
 }
