@@ -2,5 +2,4 @@ node_modules/
 .github/
 Extra/
 Images
-Model
-api/index.php
+Model/model.h5
