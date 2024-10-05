@@ -3,7 +3,6 @@
     "version": 2,
     "functions": {
         "api/index.py": {
-          "runtime":"@vercel/python",
           "memory": 1024
         }
     },
