@@ -28,7 +28,7 @@ if (!empty($i)) {
         echo "Error: Command is empty.";
     }
 } else {
-    echo "Error: Value of \$i is null or empty.";
+    echo "Error: Value of $i is null or empty.";
 }
 } else {
 echo "Error: Missing required POST parameters.";
