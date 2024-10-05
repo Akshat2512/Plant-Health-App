@@ -4,7 +4,7 @@ if(isset($_POST['url1']))
 $url = $_POST['url1'];
 $i = $_POST['val'];
 
-
+echo "hello";
 if (!is_dir('captures')) {
     mkdir('captures', 0777, true)
 }
