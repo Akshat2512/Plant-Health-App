@@ -1,6 +1,6 @@
 {
     "functions": {
-        "api/handlerequests.py": {
+        "api/handlerequest.py": {
           "memory": 1024
         }
     }
