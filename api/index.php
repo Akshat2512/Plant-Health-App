@@ -17,14 +17,21 @@ $file = fopen("$cap_Dir/IMG$i.jpg", "w");
 fwrite($file, $img);
 fclose($file);
 
-echo $i;
-$command = `python "../Python_Backend/plant_disease_detection.py" $i`;
+if (!empty($i)) {
+    $command = escapeshellarg("python Python_Backend/plant_disease_detection.py $i");
 
-$output = shell_exec($command);
-
-
-echo $output;
-
+    // Check if $command is not empty
+    if (!empty($command)) {
+        $output = shell_exec($command);
+        echo $output;
+    } else {
+        echo "Error: Command is empty.";
+    }
+} else {
+    echo "Error: Value of \$i is null or empty.";
+}
+} else {
+echo "Error: Missing required POST parameters.";
 }
 
 ?>
