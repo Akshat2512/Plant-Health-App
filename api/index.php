@@ -18,10 +18,12 @@ $file = fopen("$cap_Dir/IMG$i.jpg", "w");
 fwrite($file, $img);
 fclose($file);
 
+echo $i;
 $command = `python ../Python_Backend/plant_disease_detection.py $i`;
+echo $url;
 
 $output = escapeshellarg($command);
-$output = 
+
 
 echo $output;
 
