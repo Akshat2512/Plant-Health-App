@@ -8,10 +8,7 @@
         },
         {
             "src": "api/**/*.php",
-            "use": "@vercel/php",
-            "config": {
-            "installCommand": "npm install && npm run vercel-build"
-            }
+            "use": "@vercel/node",
           }
     ],
 
