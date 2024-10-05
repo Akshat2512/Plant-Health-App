@@ -4,13 +4,13 @@ if(isset($_POST['url1']))
 $url = $_POST['url1'];
 $i = $_POST['val'];
 
-echo "hello";
-if (!is_dir('captures')) {
+$cap_Dir = '/tmp/captures';
+if (!is_dir($cap_Dir)) {
     mkdir('captures', 0777, true);
 }
 
 $img = file_get_contents($url);
-$file = fopen("captures/IMG$i.jpg", "w");
+$file = fopen("$cap_Dir/IMG$i.jpg", "w");
 fwrite($file, $img);
 fclose($file);
 
