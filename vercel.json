@@ -6,8 +6,10 @@
             "src": "public/**/*",
             "use": "@vercel/static" 
         },
-        
-       { "src": "node_modules", "installCommand": "npm run vercel-build" }
+        {
+            "src": "api/**/*.php",
+            "use": "@vercel/node"
+          }
     ],
 
     "routes": [
