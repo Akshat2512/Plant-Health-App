@@ -1,6 +1,6 @@
 {
     "functions": {
-        "api/handlerequest.py": {
+        "api/index.py": {
           "runtime":"@vercel/python",
           "memory": 1024
         }
