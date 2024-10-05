@@ -18,7 +18,7 @@ fclose($file);
 
 print_r(scandir($url_1));
 
-$command = `python "api/plant_disease_detection.py" $i`;
+$command = `python "plant_disease_detection.py" $i`;
 echo $command;
 
 }
