@@ -18,7 +18,7 @@ $file = fopen("$cap_Dir/IMG$i.jpg", "w");
 fwrite($file, $img);
 fclose($file);
 
-$command = `python "Python_Backend/plant_disease_detection.py" $i`;
+$command = `python "../Python_Backend/plant_disease_detection.py" $i`;
 
 $output = escapeshellarg($command);
 
