@@ -17,11 +17,11 @@ $file = fopen("$cap_Dir/IMG$i.jpg", "w");
 fwrite($file, $img);
 fclose($file);
 
-if (!empty($i)) {
+if ($i !== '' || $i !== null) {
     $command = escapeshellarg("python Python_Backend/plant_disease_detection.py $i");
 
     // Check if $command is not empty
-    if ($i !== '' || $i !== null) {
+    if (!empty($command)) {
         $output = shell_exec($command);
         echo $output;
     } else {
