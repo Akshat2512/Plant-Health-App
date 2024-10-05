@@ -4,7 +4,7 @@ if(isset($_POST['url1']))
 $url = $_POST['url1'];
 $i = $_POST['val'];
 
-$cap_Dir = 'var/task/user/api/captures';
+$cap_Dir = 'tmp/captures';
 if (!is_dir($cap_Dir)) {
     mkdir('captures', 0777, true);
 }
