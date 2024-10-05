@@ -21,7 +21,7 @@ if (!empty($i)) {
     $command = escapeshellarg("python Python_Backend/plant_disease_detection.py $i");
 
     // Check if $command is not empty
-    if (!empty($command)) {
+    if ($i !== '' || $i !== null) {
         $output = shell_exec($command);
         echo $output;
     } else {
