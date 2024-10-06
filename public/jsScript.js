@@ -158,11 +158,10 @@ $('#view').eq(0)[0].hidden = 'hidden';
      
 function predict_disease(dataURL, i)
 {  
-    
    $.ajax({
             type: "POST",
-            url: "../api/",
-            data: {url : dataURL, url1 : '../', val : i},
+            url: "/process",
+            data: {img : dataURL},
             success: function(response){
         
                 show_loading('receiving');
