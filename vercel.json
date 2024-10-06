@@ -7,8 +7,8 @@
       "use": "@vercel/python@canary"
     }
   ],
-  "env": {
-    "PYTHON_VERSION": "3.10"
+  "scripts": {
+    "build": "pipenv install"
   },
     "rewrites": [
       { "source": "/(.*)", "destination": "api/index.py" }
