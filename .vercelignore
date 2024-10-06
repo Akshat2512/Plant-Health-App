@@ -1,5 +1,4 @@
-node_modules/
-.github/
-Extra/
+.github
+Extra
 Images
-Model/model.tflite
+
