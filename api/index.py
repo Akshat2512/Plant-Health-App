@@ -1,6 +1,6 @@
-import subprocess,json
-from flask import Flask, render_template, request, redirect, Response
-from ..Module.Predictor import onnx_model
+# import subprocess,json
+# from flask import Flask, render_template, request, redirect, Response
+from Module.Predictor import onnx_model
 # from flask_cors import CORS
 
 app = Flask(__name__)
@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('api/index.html')
+    return "hello"
 
 @app.route('/process', methods=['POST'])
 def greet():
