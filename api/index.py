@@ -1,6 +1,7 @@
 import subprocess,json
 from flask import Flask, render_template, request, redirect, Response
 from Module.Predictor import onnx_model
+from PIL import Image
 # from flask_cors import CORS
 
 app = Flask(__name__)
