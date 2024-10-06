@@ -1,5 +1,5 @@
 flask==3.0.3
-imageio==2.35.1
-# pillow==10.4.0
+# imageio==2.35.1
+pillow==10.4.0
 # numpy==2.1.2
-onnxruntime==1.19.2
+# onnxruntime==1.19.2
