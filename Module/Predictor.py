@@ -2,7 +2,7 @@ import onnxruntime as ort
 import numpy as np
 # # import tensorflow as tf
 # import tflite_runtime.interpreter as tflite
-from scipy.special import softmax
+
 from PIL import Image
 import json
 
@@ -15,9 +15,13 @@ class_names = ['Apple___Apple_scab', 'Apple___Black_rot', 'Apple___Cedar_apple_r
 img_height = 256
 img_width = 256
 
+def softmax(x):
+    e_x = np.exp(x - np.max(x, axis=1, keepdims=True))
+    return e_x / np.sum(e_x, axis=1, keepdims=True)
+
 def onnx_model(dataURL):
     
-    
+
     try:
 
         base64_data = dataURL.split(",")[1]
