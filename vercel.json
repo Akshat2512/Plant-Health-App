@@ -13,7 +13,15 @@
   ],
 
     "rewrites": [
-      { "source": "/(.*)", "destination": "api/index.py" }
+      { 
+        "source": "/(.*)", 
+        "destination": "api/index.py"
+      }
+    ],
+    
+    "routes":[
+      {
+        "src": "/(.*)", "dest": "public/$1"
+      }
     ]
-
   }
