@@ -1,5 +1,5 @@
 # import subprocess,json
-# from flask import Flask, render_template, request, redirect, Response
+from flask import Flask, render_template, request, redirect, Response
 from Module.Predictor import onnx_model
 # from flask_cors import CORS
 
