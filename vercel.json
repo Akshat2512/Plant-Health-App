@@ -8,7 +8,7 @@
     },
     {
       "src": "api/**/*.py",
-      "use": "@vercel/python@canary"
+      "use": "@vercel/python"
     }
   ],
     "rewrites": [ 

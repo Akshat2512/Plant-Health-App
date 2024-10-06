@@ -161,14 +161,16 @@ function predict_disease(dataURL, i)
    $.ajax({
             type: "POST",
             url: "/process",
-            data: {img : dataURL},
+            data: JSON.stringify({img : dataURL}),
+            headers: {"Content-Type":"application/json"},
             success: function(response){
-        
+
                 show_loading('receiving');
                 console.log(response);
-                data = JSON.parse(response);
+        
+                // data = JSON.parse(response);
                 
-                update_data(data, dataURL, i);
+                update_data(response, dataURL, i);
             },
             error: function(xhr, status, error) {
                    console.error("Error executing Python script:", error);

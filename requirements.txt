@@ -1,6 +1,6 @@
-tensorflow-cpu==2.15.0
 flask==3.0.3
-flask-cors==3.0.10
+flask-cors==5.0.0
 pillow==9.0.0
 numpy==1.26.4
-
+scipy==1.24.1
+onnx==1.19.2
