@@ -8,7 +8,7 @@ CORS(app)
 
 @app.route('/')
 def index():
-    return render_template('../public')
+    return render_template('public/')
 
 @app.route('/process', methods=['POST'])
 def greet():
