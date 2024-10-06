@@ -1,7 +1,7 @@
 
 # import numpy as np
 
-from PIL import Image
+# from PIL import Image
 import json
 import math, array
 from io import BytesIO
