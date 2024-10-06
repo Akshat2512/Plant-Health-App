@@ -10,6 +10,7 @@ app = Flask(__name__)
 def greet():
     req_data = request.json
     data = req_data['img']
+    print(data)
     response = onnx_model(data)
     return Response(response, mimetype='application/json')
 
