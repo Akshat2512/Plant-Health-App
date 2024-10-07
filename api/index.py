@@ -7,9 +7,9 @@ from Module.Predictor import onnx_model
 app = Flask(__name__)
 # CORS(app)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+# @app.route('/')
+# def index():
+#     return render_template('index.html')
 
 @app.route('/process', methods=['POST'])
 def greet():
@@ -18,5 +18,5 @@ def greet():
     response = onnx_model(data)
     return Response(response, mimetype='application/json')
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True)
