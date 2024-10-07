@@ -1,7 +1,7 @@
 import subprocess,json
 from flask import Flask, render_template, request, redirect, Response, send_file
 from Module.Predictor import onnx_model
-from Module.process import process_image
+
 # from flask_cors import CORS
 
 app = Flask(__name__)
