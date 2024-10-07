@@ -1,4 +1,7 @@
 my-env
 Images
 Extra
-PIL
+node_modules
+package.json
+package-lock.json
+upload_model.js

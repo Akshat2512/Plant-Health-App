@@ -1,5 +1,5 @@
 
-# import numpy as np
+import numpy as np
 
 
 import json
@@ -8,7 +8,7 @@ from io import BytesIO
 import base64
 import onnxruntime as ort
 # from PIL import Image
-
+import mahotas as mh
 
 class_names = ['Apple___Apple_scab', 'Apple___Black_rot', 'Apple___Cedar_apple_rust', 'Apple___healthy', 'Background___without_leaves', 'Blueberry___healthy', 'Cherry___healthy', 'Cherry___Powdery_mildew', 'Corn___Cercospora_leaf_spot Gray_leaf_spot', 'Corn___Common_rust', 'Corn___healthy', 'Corn___Northern_Leaf_Blight', 'Grape___Black_rot', 'Grape___Esca_(Black_Measles)', 'Grape___healthy', 'Grape___Leaf_blight_(Isariopsis_Leaf_Spot)', 'Orange___Haunglongbing_(Citrus_greening)', 'Peach___Bacterial_spot', 'Peach___healthy', 'Pepper_bell___Bacterial_spot', 'Pepper_bell___healthy', 'Potato___Early_blight', 'Potato___healthy', 'Potato___Late_blight', 'Raspberry___healthy', 'Soybean___healthy', 'Squash___Powdery_mildew', 'Strawberry___healthy', 'Strawberry___Leaf_scorch', 'Tomato___Bacterial_spot', 'Tomato___Early_blight', 'Tomato___healthy', 'Tomato___Late_blight', 'Tomato___Leaf_Mold', 'Tomato___Septoria_leaf_spot', 'Tomato___Spider_mites Two-spotted_spider_mite', 'Tomato___Target_Spot', 'Tomato___Tomato_mosaic_virus', 'Tomato___Tomato_Yellow_Leaf_Curl_Virus']
 
@@ -40,33 +40,43 @@ def onnx_model(dataURL):
 
         base64_data = dataURL.split(",")[1]
         image_data = base64.b64decode(base64_data)
-        img = Image.open(BytesIO(image_data)).convert('RGB').resize((img_height, img_width))
-        
-        # img_array = list(img.getdata())
-        # img_array = [list(pixel) for pixel in img_array]  # Convert to list of lists
-        # img_array = [pixel for row in img_array for pixel in row]  # Flatten the list
-        # img_array = [float(pixel) for pixel in img_array]  # Convert to float
-        img_data = list(img.getdata())
-        img_array = []
-        for y in range(img.height):
-            row = []
-            for x in range(img.width):
-                pixel = img_data[y * img.width + x]
-                row.append([float(channel) for channel in pixel])
-            img_array.append(row)
-        
-        img_array = [img_array]
+        # image_data = BytesIO(image_data)
 
+        # img_data = np.frombuffer(image_data, np.uint8)
+        # print(img_data)
+        # img = Image.open(BytesIO(image_data)).convert('RGB').resize((img_height, img_width))
+        img = mh.imread(BytesIO(image_data))
+
+        if len(img.shape) == 2:  # Grayscale to RGB
+            img = np.stack((img,)*3, axis=-1)
+        elif img.shape[2] == 4:  # RGBA to RGB
+            img = img[:, :, :3]
+
+        # img_data = list(img.getdata())
+        # print(img_data)
+        print(img)
+        # img_data = img_data.tolist()
+       
+        # img_array = []
+        # for y in range(img_height):
+        #     row = []
+        #     for x in range(img_width):
+        #         pixel = img_data[y * img_width + x]
+        #         row.append([float(channel) for channel in pixel])
+        #     img_array.append(row)
+        
+        # img_array = [img_array]
+       
         # print('1', img_array)
         
     
-        # img_array = np.array(img, dtype=np.float32)
-        # img_array = np.expand_dims(img_array, axis=0)
+        img_array = np.array(img, dtype=np.float32)
+        img_array = np.expand_dims(img_array, axis=0)
         # print('2', img_array)
 
         session = ort.InferenceSession("Model/model.onnx")        
         input_details = session.get_inputs()[0].name
-        
+     
         predictions = session.run(None, {input_details: img_array})
        
         score = softmax(predictions[0])[0]
