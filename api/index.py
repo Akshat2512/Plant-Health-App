@@ -18,12 +18,13 @@ def process():
     response = onnx_model(data)
     return Response(response, mimetype='application/json')
 
-@app.route('/process_image', methods=['POST'])
-def image_proccessing():
-    data = request.json['file']
-    response = process_image(data)
-    print(response)
-    return send_file(response, mimetype='image/jpeg')
+# @app.route('/process_image', methods=['POST'])
+# def image_proccessing():
+#     data = request.json['file']
+#     response = process_image(data)
+#     response = json.dumps(response)
+#     # print(response)
+#     return Response(response, mimetype='application/json')
 
 if __name__ == "__main__":
     app.run(debug=True)

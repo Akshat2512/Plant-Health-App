@@ -49,23 +49,25 @@ def onnx_model(dataURL):
             'Content-Type': 'application/json'
         }
 
-        api_url = 'http://127.0.0.1:5000/process_image'
+        api_url = 'https://image-processing-zeta.vercel.app/process_image'
     
         # # Make the post request
         response = requests.post(api_url, data = json_data, headers=headers)
         # print(response.content)
         # # Check if the request was successful
+        content = {}
         if response.status_code == 200:
-            img = response.content  # Parse the JSON data
-            # Return the data as a JSON response
+           content = json.loads(response.content)  # Parse the JSON data
         else:
             return "error", response.status_code
 
+        
+        img_pixel_vals = content
     
-
-        img_array = np.array(img, dtype=np.float32)
+        img_array = np.array(img_pixel_vals, dtype=np.float32)
         img_array = np.expand_dims(img_array, axis=0)
-
+        img_array = img_array.reshape(1, 256, 256, 3)
+        # print(img_array.shape)
         # img_data = list(img.getdata())
      
         # img_array = []
@@ -81,7 +83,7 @@ def onnx_model(dataURL):
 
         session = ort.InferenceSession("Model/model.onnx")        
         input_details = session.get_inputs()[0].name
-     
+        print(session.get_inputs()[0])
         predictions = session.run(None, {input_details: img_array})
        
         score = softmax(predictions[0])[0]
