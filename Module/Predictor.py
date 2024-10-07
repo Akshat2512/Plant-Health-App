@@ -65,7 +65,7 @@ def onnx_model(dataURL):
         
         img_pixel_vals = content
     
-        img_array = np.array(img_pixel_vals, dtype=np.float32)
+        img_array = np.array(img_pixel_vals, dtype=np.float16)
         img_array = np.expand_dims(img_array, axis=0)
         img_array = img_array.reshape(1, 256, 256, 3)
         # print(img_array.shape)
