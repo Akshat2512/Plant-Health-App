@@ -1,5 +1,5 @@
 
-# import numpy as np
+import numpy as np
 
 import requests
 import json
@@ -45,6 +45,7 @@ def onnx_model(dataURL):
             'file' : base64_content
         }
         json_data = json.dumps(data)
+
         headers = {
             'Content-Type': 'application/json'
         }
