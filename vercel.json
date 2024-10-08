@@ -9,7 +9,8 @@
     {
       "src": "api/index.py",
       "use": "@vercel/python"
-    }
+    },
+    
   ],
   
     "rewrites": [ 
@@ -24,5 +25,13 @@
         "destination": "api/index.py"
       }
      
+    ],
+    "build": {
+    "ignore": [
+      {
+        "type": "message",
+        "value": "[skip deploy]"
+      }
     ]
+  }
   }
