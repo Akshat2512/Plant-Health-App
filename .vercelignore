@@ -1,4 +1,3 @@
-.github
-Extra
-Images
-PIL
+.github/*
+Extra/*
+Images/*

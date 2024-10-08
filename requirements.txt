@@ -1,3 +1,10 @@
+<<<<<<< HEAD
 tensorflow-cpu==2.15.0
 pillow==9.0.0
 numpy==1.26.4
+=======
+flask==3.0.3
+# numpy==2.1.2
+onnxruntime==1.19.2
+requests==2.32.3
+>>>>>>> 7e12d5af43a8f5ce071ae14757f562c8c15ba15c
