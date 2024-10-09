@@ -41,7 +41,7 @@ def image_proccessing():
     else:    
       return "File already present!"
     
-# image_proccessing()  
+image_proccessing()  
 
 # if __name__ == "__main__":
 #     app.run(debug=True)
