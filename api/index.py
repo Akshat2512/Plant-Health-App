@@ -39,7 +39,7 @@ def image_proccessing():
             else:
               return 'File saved Failed'
     else:    
-      return "File already present!<br><br>" + json.dumps(os.listdir('/tmp'))
+      return "File already present!<br><br>" + json.dumps(os.listdir('/tmp/Model'))
     
 # image_proccessing()  
 
