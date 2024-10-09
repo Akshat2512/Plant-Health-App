@@ -183,7 +183,7 @@ function predict_disease(dataURL, i)
 function show_loading(t){
     var ld =document.getElementById("loading");
     ld.style.opacity='1';
-    ld.style.transform = 'translateY(-70px)';
+    ld.style.transform = 'translateY(-80px)';
     ld.innerHTML = `<i class="fa-solid fa-spinner fa-spin-pulse"></i> ${t} ...&nbsp`;
 
     document.getElementById("cap").disabled = true;
