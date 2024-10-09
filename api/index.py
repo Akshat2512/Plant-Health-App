@@ -35,11 +35,11 @@ def image_proccessing():
               with open('/tmp/Model/model.onnx', 'wb') as file:
                 file.write(response.content)
 
-              return "File succesfully has been created<br><br>" + os.listdir('/tmp')
+              return "File succesfully has been created<br><br>" + jsn.dumps(os.listdir('/tmp'))
             else:
               return 'File saved Failed'
     else:    
-      return "File already present!<br><br>" + os.listdir('/tmp')
+      return "File already present!<br><br>" + jsn.dumps(os.listdir('/tmp'))
     
 # image_proccessing()  
 
