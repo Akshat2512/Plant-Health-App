@@ -58,7 +58,7 @@ def onnx_model(dataURL):
         # img_array = [img_array]
 
 
-        session = ort.InferenceSession("Model/model.onnx")        
+        session = ort.InferenceSession("tmp/Model/model.onnx")        
         input_details = session.get_inputs()[0].name
 
         predictions = session.run(None, {input_details: img_array})
