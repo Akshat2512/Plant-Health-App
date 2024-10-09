@@ -164,7 +164,6 @@ function predict_disease(dataURL, i)
             data: JSON.stringify({img : dataURL}),
             headers: {"Content-Type":"application/json"},
             success: function(response){
-
                 show_loading('receiving');
                 console.log(response);
         
