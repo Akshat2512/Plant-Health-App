@@ -7,9 +7,9 @@ from Module.Predictor import onnx_model
 app = Flask(__name__)
 # CORS(app)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+# @app.route('/')
+# def index():
+#     return render_template('index.html')
 
 @app.route('/process', methods=['POST'])
 def process():
@@ -20,13 +20,28 @@ def process():
 
 
 
-# @app.route('/process_image', methods=['POST'])
-# def image_proccessing():
-#     data = request.json['file']
-#     response = process_image(data)
-#     response = json.dumps(response)
-#     # print(response)
-#     return Response(response, mimetype='application/json')
+def image_proccessing():
 
-if __name__ == "__main__":
-    app.run(debug=True)
+    db_info = {
+        "url" : 'https://ehtjvxl2iogyvqay.public.blob.vercel-storage.com/Model/model-3FP9R2vIqjWBfFotRI1ApeiQriTPhf.onnx',
+    }
+    
+    print(os.listdir('/tmp'))
+    if 'Model' not in os.listdir('/tmp'):
+
+            response = requests.get(db_info['url'])
+            if response.status_code == 200:
+              os.makedirs('/tmp/Model', exist_ok=True)
+              with open('/tmp/Model/model.onnx', 'wb') as file:
+                file.write(response.content)
+
+              return "File succesfully has been created"
+            else:
+              return 'File saved Failed'
+    else:    
+      return "File already present!"
+    
+image_proccessing()  
+
+# if __name__ == "__main__":
+#     app.run(debug=True)

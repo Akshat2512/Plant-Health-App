@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Heath App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="https://kit.fontawesome.com/33036627a7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <select id="cameraList"> </select> 
+    <div id="view" hidden>view history <i class="fa-solid fa-angle-down"></i></div>
+ 
+    <div id="main">
+        <div id="video"> 
+            <video> </video> 
+        </div> 
+        <div id="btn">
+            <label for="file-upload" class="custom-file-upload"><i class="fa-sharp fa-solid fa-image" style="color: #929aa0;"></i></label><input multiple type="file" id="file-upload" accept=".jpg, .png, .jpeg" hidden>
+            <span id="loading"></span><button id="cap" type='button' onclick='capture()'></button>
+            <button id='st' type='button' onclick="stopCamera()"><i class="fa-solid fa-stop"></i></button>
+        </div>
+       
+    </div>
+
+    <canvas id="c" hidden="hidden"> </canvas><br>
+
+    <div id='results'></div><span id="close_results" hidden><i class="fa-solid fa-circle-xmark"></i></span>
+            
+    <script src="jsScript.js"></script>
+
+</body>
+</html>
