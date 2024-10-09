@@ -18,6 +18,8 @@ def process():
     response = onnx_model(data)
     return Response(response, mimetype='application/json')
 
+
+
 # @app.route('/process_image', methods=['POST'])
 # def image_proccessing():
 #     data = request.json['file']
@@ -26,5 +28,5 @@ def process():
 #     # print(response)
 #     return Response(response, mimetype='application/json')
 
-# if __name__ == "__main__":
-#     app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
