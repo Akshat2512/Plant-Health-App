@@ -13,7 +13,7 @@ The Plant Disease Detection App is an innovative solution that helps farmers ide
 
 ## How It Works
 - Frontend:
-The frontend is built using modern web technologies such as HTML5, CSS and Javascript. It provides a user-friendly interface for interacting with the app. This app is suitable for both desktop and Mobile devices. Even for low end devices.  
+The frontend is built using modern web technologies such as HTML5, CSS and Javascript. It provides a user-friendly interface for interacting with the app. This app is suitable for both desktop and Mobile devices. 
 
 Here’s a sneak peek of the frontend: 
 
