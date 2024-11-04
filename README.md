@@ -1,7 +1,10 @@
 ## Overview
 The Plant Disease Detection App is an innovative solution that helps farmers identify diseases in their crops early, allowing for timely intervention. By leveraging machine learning techniques, this app analyzes images of plant leaves and provides accurate disease predictions.
 
-Features
+## Project Deployment URL
+[View Deployed Project](https://plant-health-app.vercel.app/)<br><br>
+
+## Features
 <ol type='1'>
 <li>Image Upload: Users can upload or capture images of plant leaves directly through the app.</li>
 <li>Disease Prediction: The app processes the uploaded image and predicts the type of disease affecting the plant.</li>
